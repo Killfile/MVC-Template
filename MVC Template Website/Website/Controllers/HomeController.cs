@@ -10,7 +10,7 @@ namespace ContosoUniversity.Controllers
 {
     public class HomeController : Controller
     {
-        private SchoolContext db = new SchoolContext();
+        private TemplateDBContext db = new TemplateDBContext();
 
         public ActionResult Index()
         {

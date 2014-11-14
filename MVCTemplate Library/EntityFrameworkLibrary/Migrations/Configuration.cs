@@ -8,14 +8,14 @@ namespace ContosoUniversity.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<SchoolContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<TemplateDBContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(SchoolContext context)
+        protected override void Seed(TemplateDBContext context)
         {
             var students = new List<Student>
             {
@@ -208,7 +208,7 @@ namespace ContosoUniversity.Migrations
             context.SaveChanges();
         }
 
-        void AddOrUpdateInstructor(SchoolContext context, string courseTitle, string instructorName)
+        void AddOrUpdateInstructor(TemplateDBContext context, string courseTitle, string instructorName)
         {
             var crs = context.Courses.SingleOrDefault(c => c.Title == courseTitle);
             var inst = crs.Instructors.SingleOrDefault(i => i.LastName == instructorName);

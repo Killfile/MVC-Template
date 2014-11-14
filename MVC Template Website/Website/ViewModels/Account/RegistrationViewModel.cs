@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Web.Security;
+using Template.Authentication.Model;
 
 namespace ContosoUniversity.ViewModels.Account
 {
@@ -25,9 +26,13 @@ namespace ContosoUniversity.ViewModels.Account
         [Required]
         public string PasswordAnswer { get; set; }
 
-        public RegistrationViewModel(MembershipUser user) {
+        public RegistrationViewModel()
+        {
+        }
+
+        public RegistrationViewModel(User user) {
             Username = user.UserName;
-            Email = user.Email;
+            Email = "not in current model";
             Password = "******";
 
         }

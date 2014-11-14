@@ -1,0 +1,11 @@
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.AuthenticationTests\bin\Debug\Template.AuthenticationTests.dll
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.AuthenticationTests\bin\Debug\Template.AuthenticationTests.pdb
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.AuthenticationTests\bin\Debug\Template.Authentication.dll
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.AuthenticationTests\bin\Debug\BCrypt.Net.dll
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.AuthenticationTests\bin\Debug\Template.Authentication.pdb
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.AuthenticationTests\bin\Debug\BCrypt.Net.pdb
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.AuthenticationTests\bin\Debug\BCrypt.Net.xml
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.AuthenticationTests\obj\Debug\Template.AuthenticationTests.csprojResolveAssemblyReference.cache
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.AuthenticationTests\obj\Debug\Template.AuthenticationTests.dll
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.AuthenticationTests\obj\Debug\Template.AuthenticationTests.pdb
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.AuthenticationTests\bin\Debug\AutoMapper.Net4.dll

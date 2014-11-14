@@ -1,18 +1,28 @@
-﻿using ContosoUniversity.ViewModels.Account;
+﻿using System.Web;
+using ContosoUniversity.ViewModels.Account;
 using System;
 using System.Web.Mvc;
 using System.Web.Security;
+using Template.Authentication;
+using Template.Authentication.Model;
 
 namespace ContosoUniversity.Controllers
 {
     public class AccountController : Controller
     {
-        private MembershipProvider provider;
-        private bool isApproved = true;
+        private TemplateMembershipProvider _provider;
+        private const bool IsApproved = true;
+
+        public AccountController(TemplateMembershipProvider provider)
+        {
+            this._provider = provider;
+        }
+
         // GET: Account
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("MyAccount");
+            
         }
 
         // Get: Register
@@ -25,15 +35,10 @@ namespace ContosoUniversity.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Register(RegistrationViewModel model) {
             try{
-                if(ModelState.IsValid) {
-                    
-                    MembershipCreateStatus status;
-                    MembershipUser user = Membership.CreateUser(model.Username, model.Password, model.Email, model.PasswordQuestion, model.PasswordAnswer, isApproved, null, out status);
-                    if (status == MembershipCreateStatus.Success)
-                    {
-                        return RedirectToAction("RegisterSuccess");
-                    }
-                    ModelState.AddModelError("", string.Format("Error registering user {0}",status));
+                if(ModelState.IsValid)
+                {
+                    _provider.CreateUser(model.Username, model.Password);
+                   return RedirectToAction("MyAccount"); 
                 }
             }
                 catch (Exception whatBroke) {
@@ -46,9 +51,20 @@ namespace ContosoUniversity.Controllers
         [Authorize]
         public ActionResult MyAccount()
         {
-            MembershipUser user = Membership.GetUser();
+            var ticket = GetFormsAuthTicket();
 
-            return View(new RegistrationViewModel(user));
+            User currentUser = _provider.GetUser(ticket.Name);
+
+
+
+            return View(new RegistrationViewModel(currentUser));
+        }
+
+        private FormsAuthenticationTicket GetFormsAuthTicket()
+        {
+            HttpCookie authCookie = Request.Cookies[FormsAuthentication.FormsCookieName];
+            FormsAuthenticationTicket ticket = FormsAuthentication.Decrypt(authCookie.Value);
+            return ticket;
         }
 
         public ActionResult Login() {

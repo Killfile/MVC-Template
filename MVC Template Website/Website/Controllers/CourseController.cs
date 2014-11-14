@@ -14,7 +14,7 @@ namespace ContosoUniversity.Controllers
 {
     public class CourseController : Controller
     {
-        private SchoolContext db = new SchoolContext();
+        private TemplateDBContext db = new TemplateDBContext();
 
         // GET: /Course/
         public ActionResult Index(int? SelectedDepartment)

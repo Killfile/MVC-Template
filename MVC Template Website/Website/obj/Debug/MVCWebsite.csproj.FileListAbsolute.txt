@@ -6,7 +6,6 @@ E:\SideProjects\MVC Template\MVC Template Website\Website\bin\EntityFramework.dl
 E:\SideProjects\MVC Template\MVC Template Website\Website\bin\EntityFramework.SqlServer.dll
 E:\SideProjects\MVC Template\MVC Template Website\Website\bin\Microsoft.Web.Infrastructure.dll
 E:\SideProjects\MVC Template\MVC Template Website\Website\bin\Newtonsoft.Json.dll
-E:\SideProjects\MVC Template\MVC Template Website\Website\bin\OmidID.Web.Security.EFMembershipProvider.dll
 E:\SideProjects\MVC Template\MVC Template Website\Website\bin\PagedList.dll
 E:\SideProjects\MVC Template\MVC Template Website\Website\bin\PagedList.Mvc.dll
 E:\SideProjects\MVC Template\MVC Template Website\Website\bin\System.Web.Helpers.dll
@@ -19,7 +18,6 @@ E:\SideProjects\MVC Template\MVC Template Website\Website\bin\System.Web.WebPage
 E:\SideProjects\MVC Template\MVC Template Website\Website\bin\WebGrease.dll
 E:\SideProjects\MVC Template\MVC Template Website\Website\bin\EntityFramework.xml
 E:\SideProjects\MVC Template\MVC Template Website\Website\bin\EntityFramework.SqlServer.xml
-E:\SideProjects\MVC Template\MVC Template Website\Website\bin\OmidID.Web.Security.EFMembershipProvider.pdb
 E:\SideProjects\MVC Template\MVC Template Website\Website\bin\PagedList.xml
 E:\SideProjects\MVC Template\MVC Template Website\Website\bin\PagedList.Mvc.xml
 E:\SideProjects\MVC Template\MVC Template Website\Website\bin\System.Web.Helpers.xml
@@ -33,3 +31,20 @@ E:\SideProjects\MVC Template\MVC Template Website\Website\bin\Newtonsoft.Json.xm
 E:\SideProjects\MVC Template\MVC Template Website\Website\bin\Antlr3.Runtime.pdb
 E:\SideProjects\MVC Template\MVC Template Website\Website\obj\Debug\ContosoUniversity.dll
 E:\SideProjects\MVC Template\MVC Template Website\Website\obj\Debug\ContosoUniversity.pdb
+E:\SideProjects\MVC Template\MVC Template Website\Website\obj\Debug\MVCWebsite.csprojResolveAssemblyReference.cache
+E:\SideProjects\MVC Template\MVC Template Website\Website\bin\Ninject.dll
+E:\SideProjects\MVC Template\MVC Template Website\Website\bin\Ninject.Web.Common.dll
+E:\SideProjects\MVC Template\MVC Template Website\Website\bin\Ninject.Web.Mvc.dll
+E:\SideProjects\MVC Template\MVC Template Website\Website\bin\Template.Authentication.dll
+E:\SideProjects\MVC Template\MVC Template Website\Website\bin\Template.Persistance.EntityFrameworkImpl.dll
+E:\SideProjects\MVC Template\MVC Template Website\Website\bin\Template.PersistanceContract.dll
+E:\SideProjects\MVC Template\MVC Template Website\Website\bin\WebActivatorEx.dll
+E:\SideProjects\MVC Template\MVC Template Website\Website\bin\Ninject.xml
+E:\SideProjects\MVC Template\MVC Template Website\Website\bin\Ninject.Web.Common.xml
+E:\SideProjects\MVC Template\MVC Template Website\Website\bin\Ninject.Web.Mvc.xml
+E:\SideProjects\MVC Template\MVC Template Website\Website\bin\AutoMapper.Net4.dll
+E:\SideProjects\MVC Template\MVC Template Website\Website\bin\AutoMapper.dll
+E:\SideProjects\MVC Template\MVC Template Website\Website\bin\AutoMapper.xml
+E:\SideProjects\MVC Template\MVC Template Website\Website\bin\BCrypt.Net.dll
+E:\SideProjects\MVC Template\MVC Template Website\Website\bin\BCrypt.Net.pdb
+E:\SideProjects\MVC Template\MVC Template Website\Website\bin\BCrypt.Net.xml

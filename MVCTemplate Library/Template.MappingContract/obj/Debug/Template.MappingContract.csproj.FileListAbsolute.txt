@@ -1,0 +1,5 @@
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.MappingContract\bin\Debug\Template.MappingContract.dll
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.MappingContract\bin\Debug\Template.MappingContract.pdb
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.MappingContract\obj\Debug\Template.MappingContract.csprojResolveAssemblyReference.cache
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.MappingContract\obj\Debug\Template.MappingContract.dll
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.MappingContract\obj\Debug\Template.MappingContract.pdb

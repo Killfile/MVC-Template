@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{05BE08A8-5B6F-4CB6-9CF0-0723257B7473}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Template.Persistance.EntityFrameworkImpl</RootNamespace>
+    <AssemblyName>Template.Persistance.EntityFrameworkImpl</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\TemplateDBConfiguration.cs" />
+    <Compile Include="DAL\TemplateDBContext.cs" />
+    <Compile Include="DAL\TemplateDBInitializer.cs" />
+    <Compile Include="DAL\TemplateDBInterceptorLogging.cs" />
+    <Compile Include="DAL\TemplateDbInterceptorTransientErrors.cs" />
+    <Compile Include="EntityFrameworkModels\Membership\EFMembership.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Migrations\201402242126344_InitialCreate.cs" />
+    <Compile Include="Migrations\201402242126344_InitialCreate.Designer.cs">
+      <DependentUpon>201402242126344_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201402242138028_MaxLengthOnNames.cs" />
+    <Compile Include="Migrations\201402242138028_MaxLengthOnNames.Designer.cs">
+      <DependentUpon>201402242138028_MaxLengthOnNames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201402242139118_ColumnFirstName.cs" />
+    <Compile Include="Migrations\201402242139118_ColumnFirstName.Designer.cs">
+      <DependentUpon>201402242139118_ColumnFirstName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201402242150170_ComplexDataModel.cs" />
+    <Compile Include="Migrations\201402242150170_ComplexDataModel.Designer.cs">
+      <DependentUpon>201402242150170_ComplexDataModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201402251758056_DepartmentSP.cs" />
+    <Compile Include="Migrations\201402251758056_DepartmentSP.Designer.cs">
+      <DependentUpon>201402251758056_DepartmentSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201402251804219_RowVersion.cs" />
+    <Compile Include="Migrations\201402251804219_RowVersion.Designer.cs">
+      <DependentUpon>201402251804219_RowVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201402251853267_Inheritance.cs" />
+    <Compile Include="Migrations\201402251853267_Inheritance.Designer.cs">
+      <DependentUpon>201402251853267_Inheritance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411131527507_BasicMembership.cs" />
+    <Compile Include="Migrations\201411131527507_BasicMembership.Designer.cs">
+      <DependentUpon>201411131527507_BasicMembership.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="EntityFrameworkModels\Course.cs" />
+    <Compile Include="EntityFrameworkModels\Department.cs" />
+    <Compile Include="EntityFrameworkModels\Enrollments.cs" />
+    <Compile Include="EntityFrameworkModels\Instructor.cs" />
+    <Compile Include="EntityFrameworkModels\OfficeAssignment.cs" />
+    <Compile Include="EntityFrameworkModels\Person.cs" />
+    <Compile Include="EntityFrameworkModels\Student.cs" />
+    <Compile Include="Authentication\MembershipEFImpl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201402242126344_InitialCreate.resx">
+      <DependentUpon>201402242126344_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201402242138028_MaxLengthOnNames.resx">
+      <DependentUpon>201402242138028_MaxLengthOnNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201402242139118_ColumnFirstName.resx">
+      <DependentUpon>201402242139118_ColumnFirstName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201402242150170_ComplexDataModel.resx">
+      <DependentUpon>201402242150170_ComplexDataModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201402251758056_DepartmentSP.resx">
+      <DependentUpon>201402251758056_DepartmentSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201402251804219_RowVersion.resx">
+      <DependentUpon>201402251804219_RowVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201402251853267_Inheritance.resx">
+      <DependentUpon>201402251853267_Inheritance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411131527507_BasicMembership.resx">
+      <DependentUpon>201411131527507_BasicMembership.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Template.Authentication\Template.Authentication.csproj">
+      <Project>{CBFA29B2-5355-40DA-9844-A19C395248A9}</Project>
+      <Name>Template.Authentication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Template.MappingContract\Template.MappingContract.csproj">
+      <Project>{9BE4A1A7-1445-4E87-A503-9D3F3FF74F21}</Project>
+      <Name>Template.MappingContract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)" ..\..\..\..\Libraries</PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

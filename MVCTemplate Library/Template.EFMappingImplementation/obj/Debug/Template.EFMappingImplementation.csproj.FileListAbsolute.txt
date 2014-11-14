@@ -1,0 +1,7 @@
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.EFMappingImplementation\bin\Debug\Template.EFMappingImplementation.dll
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.EFMappingImplementation\bin\Debug\Template.EFMappingImplementation.pdb
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.EFMappingImplementation\bin\Debug\Template.MappingContract.dll
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.EFMappingImplementation\bin\Debug\Template.MappingContract.pdb
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.EFMappingImplementation\obj\Debug\Template.EFMappingImplementation.csprojResolveAssemblyReference.cache
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.EFMappingImplementation\obj\Debug\Template.EFMappingImplementation.dll
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.EFMappingImplementation\obj\Debug\Template.EFMappingImplementation.pdb
