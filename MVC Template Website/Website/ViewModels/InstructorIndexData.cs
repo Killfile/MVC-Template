@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using ContosoUniversity.Models;
 
-namespace ContosoUniversity.ViewModels
+namespace Template.Website.ViewModels
 {
     public class InstructorIndexData
     {

@@ -30,14 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper">
-      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="AutoMapper.Net4">
-      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -54,12 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Authentication\PermissionPersistanceEFImpl.cs" />
+    <Compile Include="Authentication\RollPersistanceEFImpl.cs" />
     <Compile Include="DAL\TemplateDBConfiguration.cs" />
     <Compile Include="DAL\TemplateDBContext.cs" />
     <Compile Include="DAL\TemplateDBInitializer.cs" />
     <Compile Include="DAL\TemplateDBInterceptorLogging.cs" />
     <Compile Include="DAL\TemplateDbInterceptorTransientErrors.cs" />
     <Compile Include="EntityFrameworkModels\Membership\EFMembership.cs" />
+    <Compile Include="EntityFrameworkModels\Permission\EFPermission.cs" />
+    <Compile Include="EntityFrameworkModels\Roll\EFRoll.cs" />
     <Compile Include="Logging\ILogger.cs" />
     <Compile Include="Logging\Logger.cs" />
     <Compile Include="Migrations\201402242126344_InitialCreate.cs" />
@@ -90,9 +86,9 @@
     <Compile Include="Migrations\201402251853267_Inheritance.Designer.cs">
       <DependentUpon>201402251853267_Inheritance.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201411131527507_BasicMembership.cs" />
-    <Compile Include="Migrations\201411131527507_BasicMembership.Designer.cs">
-      <DependentUpon>201411131527507_BasicMembership.cs</DependentUpon>
+    <Compile Include="Migrations\201411201943359_Membership.cs" />
+    <Compile Include="Migrations\201411201943359_Membership.Designer.cs">
+      <DependentUpon>201411201943359_Membership.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="EntityFrameworkModels\Course.cs" />
@@ -102,7 +98,7 @@
     <Compile Include="EntityFrameworkModels\OfficeAssignment.cs" />
     <Compile Include="EntityFrameworkModels\Person.cs" />
     <Compile Include="EntityFrameworkModels\Student.cs" />
-    <Compile Include="Authentication\MembershipEFImpl.cs" />
+    <Compile Include="Authentication\MembershipPersistanceEFImpl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -131,8 +127,8 @@
     <EmbeddedResource Include="Migrations\201402251853267_Inheritance.resx">
       <DependentUpon>201402251853267_Inheritance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201411131527507_BasicMembership.resx">
-      <DependentUpon>201411131527507_BasicMembership.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201411201943359_Membership.resx">
+      <DependentUpon>201411201943359_Membership.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -140,9 +136,13 @@
       <Project>{CBFA29B2-5355-40DA-9844-A19C395248A9}</Project>
       <Name>Template.Authentication</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Template.MappingContract\Template.MappingContract.csproj">
+    <ProjectReference Include="..\Template.Extensions\Template.Extensions.csproj">
+      <Project>{8AD7FF34-0120-48BD-BFF9-76564FAA37A9}</Project>
+      <Name>Template.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Template.MappingContract\Template.Mapping.csproj">
       <Project>{9BE4A1A7-1445-4E87-A503-9D3F3FF74F21}</Project>
-      <Name>Template.MappingContract</Name>
+      <Name>Template.Mapping</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

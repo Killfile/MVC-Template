@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ContosoUniversity</RootNamespace>
-    <AssemblyName>ContosoUniversity</AssemblyName>
+    <RootNamespace>Template.Website</RootNamespace>
+    <AssemblyName>Template.Website</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -132,6 +132,15 @@
     <Reference Include="Template.Authentication">
       <HintPath>..\..\Libraries\Template.Authentication.dll</HintPath>
     </Reference>
+    <Reference Include="Template.EFMappingImplementation">
+      <HintPath>..\..\Libraries\Template.EFMappingImplementation.dll</HintPath>
+    </Reference>
+    <Reference Include="Template.Extensions">
+      <HintPath>..\..\Libraries\Template.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Template.Mapping">
+      <HintPath>..\..\Libraries\Template.Mapping.dll</HintPath>
+    </Reference>
     <Reference Include="Template.Persistance.EntityFrameworkImpl">
       <HintPath>..\..\Libraries\Template.Persistance.EntityFrameworkImpl.dll</HintPath>
     </Reference>
@@ -153,6 +162,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Filters\" />
+    <Folder Include="ViewModels\Permissions\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -164,8 +174,10 @@
     <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
-    <Compile Include="ViewModels\Account\LoginViewModel.cs" />
-    <Compile Include="ViewModels\Account\RegistrationViewModel.cs" />
+    <Compile Include="Controllers\Membership\PermissionsController.cs" />
+    <Compile Include="Controllers\Membership\RollsController.cs" />
+    <Compile Include="ViewModels\Membership\Account\LoginViewModel.cs" />
+    <Compile Include="ViewModels\Membership\Account\RegistrationViewModel.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -174,6 +186,14 @@
     <Compile Include="ViewModels\AssignedCourseData.cs" />
     <Compile Include="ViewModels\EnrollmentDateGroup.cs" />
     <Compile Include="ViewModels\InstructorIndexData.cs" />
+    <Compile Include="ViewModels\Mapping\DomainToViewModelMapping.cs" />
+    <Compile Include="ViewModels\Membership\Permissions\CreatePermissionViewModel.cs" />
+    <Compile Include="ViewModels\Membership\Permissions\EditPermissionViewModel.cs" />
+    <Compile Include="ViewModels\Membership\Permissions\LinkedPermissionViewModel.cs" />
+    <Compile Include="ViewModels\Membership\Rolls\CreateRollViewModel.cs" />
+    <Compile Include="ViewModels\Membership\Rolls\EditRollViewModel.cs" />
+    <Compile Include="ViewModels\Membership\Rolls\LinkedRollViewModel.cs" />
+    <Compile Include="ViewModels\Rolls\RollViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -232,6 +252,16 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\MyAccount.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Permissions\Create.cshtml" />
+    <Content Include="Views\Permissions\Edit.cshtml" />
+    <Content Include="Views\Rolls\Create.cshtml" />
+    <Content Include="Views\Rolls\Edit.cshtml" />
+    <Content Include="Views\Permissions\Delete.cshtml" />
+    <Content Include="Views\Rolls\Delete.cshtml" />
+    <Content Include="Views\Rolls\Details.cshtml" />
+    <Content Include="Views\Permissions\Details.cshtml" />
+    <Content Include="Views\Permissions\Index.cshtml" />
+    <Content Include="Views\Rolls\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

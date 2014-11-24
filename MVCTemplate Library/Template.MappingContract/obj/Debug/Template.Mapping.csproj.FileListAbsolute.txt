@@ -1,0 +1,15 @@
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.MappingContract\obj\Debug\Template.Mapping.csprojResolveAssemblyReference.cache
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.MappingContract\bin\Debug\AutoMapper.Net4.dll
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.MappingContract\bin\Debug\Template.Mapping.dll
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.MappingContract\bin\Debug\Template.Mapping.pdb
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.MappingContract\bin\Debug\AutoMapper.dll
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.MappingContract\bin\Debug\Template.Authentication.dll
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.MappingContract\bin\Debug\BCrypt.Net.dll
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.MappingContract\bin\Debug\Template.Authentication.pdb
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.MappingContract\bin\Debug\AutoMapper.xml
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.MappingContract\bin\Debug\BCrypt.Net.pdb
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.MappingContract\bin\Debug\BCrypt.Net.xml
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.MappingContract\obj\Debug\Template.Mapping.dll
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.MappingContract\obj\Debug\Template.Mapping.pdb
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.MappingContract\bin\Debug\Template.Extensions.dll
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.MappingContract\bin\Debug\Template.Extensions.pdb

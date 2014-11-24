@@ -1,21 +1,24 @@
+using System;
+using System.Web;
+using ContosoUniversity.DAL;
+using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+using Ninject;
+using Ninject.Web.Common;
 using Template.Authentication.PasswordHashing;
-using Template.Persistance.EntityFrameworkImpl.EntityFrameworkModels.Membership;
-using Template.Persistance.EntityFrameworkImpl.PersistanceContractImpls.Membership;
+using Template.Authentication.Persistance;
+using Template.EFMappingImplementation;
+using Template.Mapping;
+using Template.MappingContract;
+using Template.Persistance.EntityFrameworkImpl.Authentication;
 using Template.PersistanceContract.Membership;
+using Template.Website;
+using Template.Website.ViewModels.Mapping;
 
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(ContosoUniversity.App_Start.NinjectWebCommon), "Start")]
-[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(ContosoUniversity.App_Start.NinjectWebCommon), "Stop")]
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(NinjectWebCommon), "Start")]
+[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(NinjectWebCommon), "Stop")]
 
-namespace ContosoUniversity.App_Start
+namespace Template.Website
 {
-    using System;
-    using System.Web;
-
-    using Microsoft.Web.Infrastructure.DynamicModuleHelper;
-
-    using Ninject;
-    using Ninject.Web.Common;
-
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
@@ -66,7 +69,13 @@ namespace ContosoUniversity.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<IMembershipContract>().To<MembershipEFImpl>();
+            kernel.Bind<TemplateDBContext>().ToSelf().InRequestScope();
+            kernel.Bind<MappingBaseline>().ToSelf();
+            kernel.Bind<InjectedMappingConfiguration>().To<DomainToEntityFrameworkMappingConfig>();
+            kernel.Bind<InjectedMappingConfiguration>().To<DomainToViewModelMappingConfig>();
+            kernel.Bind<IMembershipPersistance>().To<MembershipPersistanceEFImpl>();
+            kernel.Bind<IRollPersistance>().To<RollPersistanceEFImpl>();
+            kernel.Bind<IPermissionPersistance>().To<PermissionPersistanceEFImpl>();
             kernel.Bind<IPasswordHashing>().To<BCryptHashImpl>();
         }        
     }

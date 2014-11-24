@@ -2,10 +2,9 @@ E:\SideProjects\MVC Template\MVCTemplate Library\Template.Authentication\bin\Deb
 E:\SideProjects\MVC Template\MVCTemplate Library\Template.Authentication\bin\Debug\Template.Authentication.pdb
 E:\SideProjects\MVC Template\MVCTemplate Library\Template.Authentication\obj\Debug\Template.Authentication.dll
 E:\SideProjects\MVC Template\MVCTemplate Library\Template.Authentication\obj\Debug\Template.Authentication.pdb
-E:\SideProjects\MVC Template\MVCTemplate Library\Template.Authentication\bin\Debug\AutoMapper.Net4.dll
-E:\SideProjects\MVC Template\MVCTemplate Library\Template.Authentication\bin\Debug\AutoMapper.dll
 E:\SideProjects\MVC Template\MVCTemplate Library\Template.Authentication\bin\Debug\BCrypt.Net.dll
-E:\SideProjects\MVC Template\MVCTemplate Library\Template.Authentication\bin\Debug\AutoMapper.xml
 E:\SideProjects\MVC Template\MVCTemplate Library\Template.Authentication\bin\Debug\BCrypt.Net.pdb
 E:\SideProjects\MVC Template\MVCTemplate Library\Template.Authentication\bin\Debug\BCrypt.Net.xml
 E:\SideProjects\MVC Template\MVCTemplate Library\Template.Authentication\obj\Debug\Template.Authentication.csprojResolveAssemblyReference.cache
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.Authentication\bin\Debug\Template.Extensions.dll
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.Authentication\bin\Debug\Template.Extensions.pdb

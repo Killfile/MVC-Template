@@ -1,5 +1,4 @@
 ﻿using System;
-using AutoMapper;
 using Template.Authentication.Model;
 using Template.Authentication.PasswordHashing;
 using Template.PersistanceContract.Membership;

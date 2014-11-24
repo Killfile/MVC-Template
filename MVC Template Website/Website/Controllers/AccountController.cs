@@ -1,21 +1,25 @@
-﻿using System.Web;
-using ContosoUniversity.ViewModels.Account;
-using System;
+﻿using System;
+using System.Diagnostics;
+using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using Template.Authentication;
 using Template.Authentication.Model;
+using Template.MappingContract;
+using Template.Website.ViewModels.Account;
 
-namespace ContosoUniversity.Controllers
+namespace Template.Website.Controllers
 {
     public class AccountController : Controller
     {
         private TemplateMembershipProvider _provider;
+        private readonly MappingBaseline _mapper;
         private const bool IsApproved = true;
 
-        public AccountController(TemplateMembershipProvider provider)
+        public AccountController(TemplateMembershipProvider provider, MappingBaseline mapper)
         {
-            this._provider = provider;
+            _provider = provider;
+            _mapper = mapper;
         }
 
         // GET: Account
@@ -55,9 +59,9 @@ namespace ContosoUniversity.Controllers
 
             User currentUser = _provider.GetUser(ticket.Name);
 
+            var viewModel = _mapper.Map<User, RegistrationViewModel>(currentUser);
 
-
-            return View(new RegistrationViewModel(currentUser));
+            return View(viewModel);
         }
 
         private FormsAuthenticationTicket GetFormsAuthTicket()
@@ -74,7 +78,8 @@ namespace ContosoUniversity.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Login(LoginViewModel model) {
-            bool isValid = Membership.ValidateUser(model.Username, model.Password);
+            Debug.Assert(_provider != null, "_provider != null");
+            bool isValid = _provider.ValidateUser(model.Username, model.Password);
             if (isValid)
             {
                 FormsAuthentication.SetAuthCookie(model.Username, true);

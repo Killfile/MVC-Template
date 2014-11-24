@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,16 +45,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EFMapper.cs" />
+    <Compile Include="DomainToEntityFrameworkMappingConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Template.MappingContract\Template.MappingContract.csproj">
+    <ProjectReference Include="..\EntityFrameworkLibrary\Template.Persistance.EntityFrameworkImpl.csproj">
+      <Project>{05BE08A8-5B6F-4CB6-9CF0-0723257B7473}</Project>
+      <Name>Template.Persistance.EntityFrameworkImpl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Template.Authentication\Template.Authentication.csproj">
+      <Project>{CBFA29B2-5355-40DA-9844-A19C395248A9}</Project>
+      <Name>Template.Authentication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Template.MappingContract\Template.Mapping.csproj">
       <Project>{9BE4A1A7-1445-4E87-A503-9D3F3FF74F21}</Project>
       <Name>Template.MappingContract</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets')" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)" ..\..\..\..\Libraries</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

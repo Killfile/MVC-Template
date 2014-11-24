@@ -1,10 +1,10 @@
-﻿using System.Web.Mvc;
+﻿using System.Data.Entity.Infrastructure.Interception;
+using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using ContosoUniversity.DAL;
-using System.Data.Entity.Infrastructure.Interception;
 
-namespace ContosoUniversity
+namespace Template.Website
 {
     public class MvcApplication : System.Web.HttpApplication
     {
@@ -25,7 +25,7 @@ namespace ContosoUniversity
         {
 
             TemplateDBContext db = new TemplateDBContext();
-
+            
      
         }
     }

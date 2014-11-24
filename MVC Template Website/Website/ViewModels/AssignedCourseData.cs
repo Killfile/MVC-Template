@@ -1,4 +1,4 @@
-﻿namespace ContosoUniversity.ViewModels
+﻿namespace Template.Website.ViewModels
 {
     public class AssignedCourseData
     {

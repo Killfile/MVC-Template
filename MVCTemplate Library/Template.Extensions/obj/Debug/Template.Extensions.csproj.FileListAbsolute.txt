@@ -1,0 +1,5 @@
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.Extensions\bin\Debug\Template.Extensions.dll
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.Extensions\bin\Debug\Template.Extensions.pdb
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.Extensions\obj\Debug\Template.Extensions.csprojResolveAssemblyReference.cache
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.Extensions\obj\Debug\Template.Extensions.dll
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.Extensions\obj\Debug\Template.Extensions.pdb

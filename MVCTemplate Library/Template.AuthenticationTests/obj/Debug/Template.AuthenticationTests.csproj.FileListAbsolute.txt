@@ -8,4 +8,5 @@ E:\SideProjects\MVC Template\MVCTemplate Library\Template.AuthenticationTests\bi
 E:\SideProjects\MVC Template\MVCTemplate Library\Template.AuthenticationTests\obj\Debug\Template.AuthenticationTests.csprojResolveAssemblyReference.cache
 E:\SideProjects\MVC Template\MVCTemplate Library\Template.AuthenticationTests\obj\Debug\Template.AuthenticationTests.dll
 E:\SideProjects\MVC Template\MVCTemplate Library\Template.AuthenticationTests\obj\Debug\Template.AuthenticationTests.pdb
-E:\SideProjects\MVC Template\MVCTemplate Library\Template.AuthenticationTests\bin\Debug\AutoMapper.Net4.dll
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.AuthenticationTests\bin\Debug\Template.Extensions.dll
+E:\SideProjects\MVC Template\MVCTemplate Library\Template.AuthenticationTests\bin\Debug\Template.Extensions.pdb

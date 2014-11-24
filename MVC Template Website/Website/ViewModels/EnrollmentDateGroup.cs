@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace ContosoUniversity.ViewModels
+namespace Template.Website.ViewModels
 {
     public class EnrollmentDateGroup
     {
